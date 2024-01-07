@@ -3084,7 +3084,7 @@
      <x>0</x>
      <y>0</y>
      <width>1282</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -3098,6 +3098,7 @@
     <addaction name="separator"/>
     <addaction name="actionLoad_Text_Header_from_File"/>
     <addaction name="actionExport_Text_Header_to_File"/>
+    <addaction name="actionLoad_XML"/>
     <addaction name="separator"/>
     <addaction name="actionE_xit"/>
    </widget>
@@ -3182,6 +3183,11 @@
    </property>
    <property name="text">
     <string>Open File</string>
+   </property>
+  </action>
+  <action name="actionLoad_XML">
+   <property name="text">
+    <string>Load XML</string>
    </property>
   </action>
  </widget>

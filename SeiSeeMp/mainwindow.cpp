@@ -28,6 +28,7 @@
 #include "util2qt.h"
 #include "furlib.h"
 
+#include <iostream>
 
 #ifdef _MSC_VER
 //#include <vld.h>
@@ -3521,4 +3522,9 @@ void MainWindow::on_ckDly_toggled(bool checked)
     }
 
     InitSeisView();
+}
+// ===========================================================
+void MainWindow::on_actionLoad_XML_triggered()
+{
+    std::cout << "XML" << std::endl;
 }

@@ -256,6 +256,8 @@ private slots:
 
     void on_actionLoad_Text_Header_from_File_triggered();
 
+    void on_actionLoad_XML_triggered();
+
     void on_actionExport_Text_Header_to_File_triggered();
 
     void on_btnTxtRdx_clicked();
