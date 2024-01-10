@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,20 +14,24 @@ CONFIG += warn_off
 
 SOURCES += main.cpp\
     edithdrdialog.cpp \
+    log.cpp \
         mainwindow.cpp \
     procparmdialog.cpp \
     aboutdialog.cpp \
     axisdialog.cpp \
     workthread.cpp \
-    saveasdialog.cpp
+    saveasdialog.cpp \
+    xmlread.cpp
 
 HEADERS  += mainwindow.h \
     edithdrdialog.h \
+    log.h \
     procparmdialog.h \
     aboutdialog.h \
     axisdialog.h \
     workthread.h \
-    saveasdialog.h
+    saveasdialog.h \
+    xmlread.h
 
 FORMS    += mainwindow.ui \
     edithdrdialog.ui \

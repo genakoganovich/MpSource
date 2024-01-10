@@ -28,7 +28,7 @@
 #include "util2qt.h"
 #include "furlib.h"
 
-#include <iostream>
+#include "xmlread.h"
 
 #ifdef _MSC_VER
 //#include <vld.h>
@@ -3526,5 +3526,21 @@ void MainWindow::on_ckDly_toggled(bool checked)
 // ===========================================================
 void MainWindow::on_actionLoad_XML_triggered()
 {
-    std::cout << "XML" << std::endl;
+    QString name;
+    int ni = dlist.count();
+    XmlRead xmlRead = XmlRead();
+
+    for(int nr = 0; nr < ni; ++nr)
+    {
+        name = dirGrid.Cell(nr, 0);
+
+        if(name.endsWith(".sgy"))
+        {
+            SeisFile* sf = new SgyFile(this);
+            sf->setFname(curDir+"/"+name);
+            sf->setActive(true);
+            sf->UpdateTxtHed(xmlRead.run(sf));
+            delete sf;
+        }
+    }
 }
