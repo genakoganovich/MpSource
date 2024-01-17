@@ -19,6 +19,7 @@ SOURCES += main.cpp\
     procparmdialog.cpp \
     aboutdialog.cpp \
     axisdialog.cpp \
+    settingsdialog.cpp \
     workthread.cpp \
     saveasdialog.cpp \
     xmlread.cpp
@@ -29,6 +30,7 @@ HEADERS  += mainwindow.h \
     procparmdialog.h \
     aboutdialog.h \
     axisdialog.h \
+    settingsdialog.h \
     workthread.h \
     saveasdialog.h \
     xmlread.h
@@ -38,7 +40,8 @@ FORMS    += mainwindow.ui \
     procparmdialog.ui \
     aboutdialog.ui \
     axisdialog.ui \
-    saveasdialog.ui
+    saveasdialog.ui \
+    settingsdialog.ui
 
 # ADD THIS LINE!
 RC_FILE += app.rc

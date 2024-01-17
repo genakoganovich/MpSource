@@ -35,6 +35,10 @@
 #include "edithdrdialog.h"
 #include "saveasdialog.h"
 
+//-------------Gennadiy Koganovich----------------------------
+#include "settingsdialog.h"
+//-------------Gennadiy Koganovich----------------------------
+
 #include "workthread.h"
 
 
@@ -344,6 +348,8 @@ private slots:
 
     void on_ckDly_toggled(bool checked);
 
+    void on_actionSettings_triggered();
+
 private:
     Ui::MainWindow *ui;
 
@@ -366,6 +372,10 @@ private:
     AxisDialog     AxisDlg;
     EditHdrDialog  EdHdrDlg;
     SaveAsDialog   SaveAsDlg;
+
+    //-------------Gennadiy Koganovich----------------------------
+    SettingsDialog SettingsDlg;
+    //-------------Gennadiy Koganovich----------------------------
 
     QList<DirItem> dlist;
     QStack<zdata>  zstack;

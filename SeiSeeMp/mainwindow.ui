@@ -3100,6 +3100,7 @@
     <addaction name="actionExport_Text_Header_to_File"/>
     <addaction name="actionLoad_XML"/>
     <addaction name="separator"/>
+    <addaction name="actionSettings"/>
     <addaction name="actionE_xit"/>
    </widget>
    <widget class="QMenu" name="menu_Help">
@@ -3188,6 +3189,11 @@
   <action name="actionLoad_XML">
    <property name="text">
     <string>Load XML</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
    </property>
   </action>
  </widget>

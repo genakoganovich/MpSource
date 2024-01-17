@@ -1,21 +1,21 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QTextCodec>
-#include <iostream>
+#include <QSettings>
 
 #include "xmlread.h"
 
 
-const QString XmlRead::TemplateXml = "c:/data/xml_reader/text_header_template.xml";
-const QString XmlRead::InfoXml = "c:/data/xml_reader/project_info.xml";
-
-
 XmlRead::XmlRead()
 {
+    QSettings settings("Gennadiy Koganovich", "Seisee");
+    QString templateXml = settings.value("/Settings/template_path", "").toString();
+    QString infoXml = settings.value("/Settings/project_info_path", "").toString();
+
     templateDoc = QDomDocument("template");
     infoDoc = QDomDocument("info");
-    templateElem = setContent(TemplateXml, templateDoc).documentElement();
-    infoElem = setContent(InfoXml, infoDoc).documentElement();
+    templateElem = setContent(templateXml, templateDoc).documentElement();
+    infoElem = setContent(infoXml, infoDoc).documentElement();
     total_width = templateElem.elementsByTagName("total_width").at(0).toElement().text().toInt();
     left_width = templateElem.elementsByTagName("left_width").at(0).toElement().text().toInt();
     lines = templateElem.elementsByTagName("line");

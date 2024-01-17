@@ -36,6 +36,10 @@
     #pragma warning( disable : 4267 4100 4068 )
 #endif
 
+//---------------------------------------------
+#include "log.h"
+//---------------------------------------------
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -527,6 +531,11 @@ MainWindow::MainWindow(QWidget *parent) :
 //    exprList["SP" ] = SeisTrExpr("L-N+1");
 
     // CreatePalette24(c,v,-1,1,rgb,3); !!!
+
+    //-------------Gennadiy Koganovich----------------------------
+    qInstallMessageHandler(Util::messageToFile);
+    QCoreApplication::setOrganizationDomain("Gennadiy Koganovich");
+    QCoreApplication::setApplicationName("Seisee");
 }
 
 void MainWindow::hdrListDtGridDataEvent(int r, int c, QString& v)
@@ -3523,7 +3532,7 @@ void MainWindow::on_ckDly_toggled(bool checked)
 
     InitSeisView();
 }
-// ===========================================================
+//-------------Gennadiy Koganovich----------------------------
 void MainWindow::on_actionLoad_XML_triggered()
 {
     QString name;
@@ -3544,3 +3553,9 @@ void MainWindow::on_actionLoad_XML_triggered()
         }
     }
 }
+
+void MainWindow::on_actionSettings_triggered()
+{
+    SettingsDlg.show();
+}
+

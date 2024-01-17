@@ -19,8 +19,6 @@ public:
     XmlRead();
     QDomDocument setContent(const QString &name, QDomDocument& doc);
     QString run(SeisFile* sf);
-    static const QString TemplateXml;
-    static const QString InfoXml;
 };
 
 #endif // XMLREAD_H
